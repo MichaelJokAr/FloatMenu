@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/pic"
+        android:title="图片" />
+    <item
+        android:id="@+id/text"
+        android:title="文本" />
+    <item
+        android:id="@+id/location"
+        android:title="位置" />
+
+    <item
+        android:id="@+id/video"
+        android:title="小视频"
+        android:visible="false"/>
+</menu>
