@@ -22,7 +22,7 @@ class FloatMenu(private var context: Context) : PopupWindow(context) {
     private val X_OFFSET = 10
 
     //
-    var mMenu: Menu = MenuBuilder(context)
+    private var mMenu: Menu = MenuBuilder(context)
     //view
     private var mRecyclerView: RecyclerView? = null
     private var mInflater: LayoutInflater = LayoutInflater.from(context)
@@ -116,6 +116,10 @@ class FloatMenu(private var context: Context) : PopupWindow(context) {
     override fun dismiss() {
         super.dismiss()
         mMenuItems.clear()
+    }
+
+    fun getMenu():Menu{
+        return mMenu
     }
 
     @NonNull
