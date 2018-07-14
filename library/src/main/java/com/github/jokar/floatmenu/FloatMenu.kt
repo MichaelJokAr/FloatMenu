@@ -19,6 +19,8 @@ class FloatMenu(private var context: Context) : PopupWindow(context) {
     private val ANCHORED_GRAVITY = Gravity.TOP or Gravity.START
     private val DEFAULT_ITEM_HEIGHT = 48
     private val DEFAULT_MENU_WIDTH = 150
+    private val X_OFFSET = 10
+    
     //
     private var mMenu: Menu = MenuBuilder(context)
     //view
@@ -95,18 +97,18 @@ class FloatMenu(private var context: Context) : PopupWindow(context) {
         if (x <= mScreenPoint.x / 2) {
             if (y + menuHeight < mScreenPoint.y) {
                 animationStyle = R.style.Animation_top_left
-                showAtLocation(anchorView, ANCHORED_GRAVITY, x, y)
+                showAtLocation(anchorView, ANCHORED_GRAVITY, x + X_OFFSET, y)
             } else {
                 animationStyle = R.style.Animation_bottom_left
-                showAtLocation(anchorView, ANCHORED_GRAVITY, x, y - menuHeight)
+                showAtLocation(anchorView, ANCHORED_GRAVITY, x + X_OFFSET, y - menuHeight)
             }
         } else {
             if (y + menuHeight < mScreenPoint.y) {
                 animationStyle = R.style.Animation_top_right
-                showAtLocation(anchorView, ANCHORED_GRAVITY, x, y)
+                showAtLocation(anchorView, ANCHORED_GRAVITY, x - mMenuWidth - X_OFFSET, y)
             } else {
                 animationStyle = R.style.Animation_bottom_right
-                showAtLocation(anchorView, ANCHORED_GRAVITY, x, y - menuHeight)
+                showAtLocation(anchorView, ANCHORED_GRAVITY, x - mMenuWidth + X_OFFSET, y - menuHeight)
             }
         }
     }
