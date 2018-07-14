@@ -20,9 +20,9 @@ class FloatMenu(private var context: Context) : PopupWindow(context) {
     private val DEFAULT_ITEM_HEIGHT = 48
     private val DEFAULT_MENU_WIDTH = 150
     private val X_OFFSET = 10
-    
+
     //
-    private var mMenu: Menu = MenuBuilder(context)
+    var mMenu: Menu = MenuBuilder(context)
     //view
     private var mRecyclerView: RecyclerView? = null
     private var mInflater: LayoutInflater = LayoutInflater.from(context)
