@@ -1,10 +1,10 @@
 ### FloatMenu
 
-popupMenu show as click point
+popupMenu show as click position
 
 ### use
 
-- new Point in your activity and Override the method ```dispatchTouchEvent``` to get your click poiny
+- new Point in your activity and Override the method ```dispatchTouchEvent``` to get your click position
 
 ```
     private val mPoint = Point()
