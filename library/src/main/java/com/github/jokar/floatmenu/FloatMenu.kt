@@ -96,18 +96,18 @@ class FloatMenu(private var context: Context) : PopupWindow(context) {
         val menuHeight = DisplayUtil.dip2px(context, DEFAULT_ITEM_HEIGHT * mMenuItems.size)
         if (x <= mScreenPoint.x / 2) {
             if (y + menuHeight < mScreenPoint.y) {
-                animationStyle = R.style.Animation_top_left
+                animationStyle = R.style.top_for_left
                 showAtLocation(anchorView, ANCHORED_GRAVITY, x + X_OFFSET, y)
             } else {
-                animationStyle = R.style.Animation_bottom_left
+                animationStyle = R.style.bottom_for_left
                 showAtLocation(anchorView, ANCHORED_GRAVITY, x + X_OFFSET, y - menuHeight)
             }
         } else {
             if (y + menuHeight < mScreenPoint.y) {
-                animationStyle = R.style.Animation_top_right
+                animationStyle = R.style.top_for_right
                 showAtLocation(anchorView, ANCHORED_GRAVITY, x - mMenuWidth - X_OFFSET, y)
             } else {
-                animationStyle = R.style.Animation_bottom_right
+                animationStyle = R.style.bottom_for_right
                 showAtLocation(anchorView, ANCHORED_GRAVITY, x - mMenuWidth + X_OFFSET, y - menuHeight)
             }
         }
