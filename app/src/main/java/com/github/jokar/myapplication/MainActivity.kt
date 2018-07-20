@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity() {
         mFloatMenu = FloatMenu(this)
         //set menu dataSource
         mFloatMenu.inflate(R.menu.menu_chat)
+        mFloatMenu.isOutsideTouchable = false
         //menu item click
         mFloatMenu.mOnMenuItemClickListener = object : OnMenuItemClickListener {
             override fun onMenuItemClick(item: MenuItem) {
@@ -47,6 +48,10 @@ class MainActivity : AppCompatActivity() {
         if (ev.action == MotionEvent.ACTION_DOWN) {
             mPoint.x = ev.rawX.toInt()
             mPoint.y = ev.rawY.toInt()
+            if(mFloatMenu?.isShowing){
+                mFloatMenu.dismiss()
+                return true
+            }
         }
         return super.dispatchTouchEvent(ev)
     }

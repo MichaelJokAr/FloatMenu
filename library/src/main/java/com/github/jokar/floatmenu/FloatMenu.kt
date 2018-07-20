@@ -42,6 +42,7 @@ class FloatMenu(private var context: Context) : PopupWindow(context) {
         mRecyclerView?.adapter = mMenuAdapter
         //set option
         width = mMenuWidth
+        height = ViewGroup.LayoutParams.WRAP_CONTENT
         setBackgroundDrawable(null)
         isOutsideTouchable = true
         //set shadow

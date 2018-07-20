@@ -4,7 +4,7 @@ publish {
     userOrg = 'a10188755550'
     groupId = 'com.github.jokar'
     artifactId = 'FloatMenu'
-    publishVersion = '0.0.1'
+    publishVersion = '0.0.2'
     desc = 'popupmeu show as click position'
     website = 'https://github.com/a1018875550/FloatMenu'
 }
