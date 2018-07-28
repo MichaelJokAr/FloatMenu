@@ -8,7 +8,7 @@ popupMenu show as click position
 
 - gradle
 ```
-compile 'com.github.jokar:FloatMenu:0.0.2'
+compile 'com.github.jokar:FloatMenu:0.0.3'
 ```
 
 - new Point in your activity and Override the method ```dispatchTouchEvent``` to get your click position
